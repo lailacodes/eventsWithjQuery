@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <title> jQuery Events and Effects</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                // Instagram
+                $("#instagram").on("mouseenter", function () {
+                    $("#in").html("<em>Instagram</em")
+                    $("#instagram").fadeTo(100,0.5)
+                });
+                $("#instagram").on("mouseleave", function () {
+                    $("#out").html("<em>Instagram</em")
+                    $("#instagram").fadeTo(100,1)
+                });
+                $("#instagram").on("dblclick", function () {
+                    window.open("https://www.instagram.com");
+                });
+                $("#instagram").on("click", function () {
+                    $("#icon").html("<img src='logos/Instagram-logo.png' height='250'/>")
+                });
+
+                //Pinterest
+                $("#pinterest").on("mouseenter", function () {
+                    $("#in").html("<em>Pinterest</em")
+                    $("#pinterest").fadeTo(100,0.5)
+                });
+                $("#pinterest").on("mouseleave", function () {
+                    $("#out").html("<em>Pinterest</em")
+                    $("#pinterest").fadeTo(100,1)
+                });
+                $("#pinterest").on("dblclick", function () {
+                    window.open("https://www.pinterest.com");
+                });
+                $("#pinterest").on("click", function () {
+                    $("#icon").html("<img src='logos/Pinterest-logo.png' height='250'/>")
+                });
+
+                // Reddit
+                $("#reddit").on("mouseenter", function () {
+                    $("#in").html("<em>Reddit</em")
+                    $("#reddit").fadeTo(100,0.5)
+                });
+                $("#reddit").on("mouseleave", function () {
+                    $("#out").html("<em>Reddit</em")
+                    $("#reddit").fadeTo(100,1)
+                });
+                $("#reddit").on("dblclick", function () {
+                    window.open("https://www.reddit.com");
+                });
+                $("#reddit").on("click", function () {
+                    $("#icon").html("<img src='logos/reddit-logo.png' height='250'/>")
+                });
+
+                //Spotify
+                $("#spotify").on("mouseenter", function () {
+                    $("#in").html("<em>Spotify</em")
+                    $("#spotify").fadeTo(100,0.5)
+                });
+                $("#spotify").on("mouseleave", function () {
+                    $("#out").html("<em>Spotify</em")
+                    $("#spotify").fadeTo(100,1)
+                });
+                $("#spotify").on("dblclick", function () {
+                    window.open("https://www.spotify.com");
+                });
+                $("#spotify").on("click", function () {
+                    $("#icon").html("<img src='logos/Spotify-logo.png' height='250'/>")
+                });
+
+                //Amazon
+                $("#amazon").on("mouseenter", function () {
+                    $("#in").html("<em>Amazon</em")
+                    $("#amazon").fadeTo(100,0.5)
+                });
+                $("#amazon").on("mouseleave", function () {
+                    $("#out").html("<em>Amazon</em")
+                    $("#amazon").fadeTo(100,1)
+                });
+                $("#amazon").on("dblclick", function () {
+                    window.open("https://www.amazon.com");
+                });
+                $("#amazon").on("click", function () {
+                    $("#icon").html("<img src='logos/amazon-logo.png' height='250'/>")
+                });
+
+                //Wattpad
+                $("#wattpad").on("mouseenter", function () {
+                    $("#in").html("<em>Wattpad</em")
+                    $("#wattpad").fadeTo(100,0.5)
+                });
+                $("#wattpad").on("mouseleave", function () {
+                    $("#out").html("<em>Wattpad</em")
+                    $("#wattpad").fadeTo(100,1)
+                });
+                $("#wattpad").on("dblclick", function () {
+                    window.open("https://www.wattpad.com");
+                });
+                $("#wattpad").on("click", function () {
+                    $("#icon").html("<img src='logos/wattpad-logo.png' height='250'/>")
+                });
+
+                $(document).mousemove(function (event){
+                    let posX = event.clientX;
+                    let posY = event.clientY;
+
+                    $("#x").text(posX);
+                    $("#y").text(posY);
+                });
+            });
+        </script>
+
+        <style>
+            p{
+                margin: 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <span>
+            <img src="logos/Instagram-logo.png" height="100" id = "instagram"/>
+            <img src="logos/Pinterest-logo.png" height="100" id = "pinterest"/>
+            <img src="logos/reddit-logo.png" height="100" id = "reddit"/> <br/>
+            <img src="logos/Spotify-logo.png" height="100" id = "spotify"/>
+            <img src="logos/amazon-logo.png" height="100" id = "amazon"/>
+            <img src="logos/wattpad-logo.png" height="100" id = "wattpad"/>
+        </span>
+
+        <p>In: <span id="in"> </span></p>
+        <p>Out: <span id="out"> </span></p>
+        <p>Mouse X: <span id="x"> </span>, Y: <span id="y"> </span></p>
+        <div id = "icon"></div>
+    </body>
+</html>
